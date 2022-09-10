@@ -2,17 +2,27 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
 // Swiper 7.4.1
 // @import "vendor/swiper";
 
 // Global
 // ---------------------------------
+@import "variables/variables";
+@import "global/container";
+@import "global/reboot";
+@import "global/fonts";
+@import "global/utils";
+@import "mixins/mixins";
 
 
 
 // Blocks
 // ---------------------------------
-
+@import "blocks/page-header.scss";
+@import "blocks/intro.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/advantages.scss";
 
 // ---------------------------------
 

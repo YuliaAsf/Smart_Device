@@ -1,0 +1,110 @@
+.advantages__container {
+  padding: 120px 350px;
+
+  @media (max-width: $vp-1676) {
+    padding: 100px;
+  }
+
+  @media (max-width: $vp-1023) {
+    padding: 80px 50px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 50px 25px;
+  }
+}
+
+.advantages__container ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 29px 32px;
+  @include reset-list;
+
+  @media (max-width: $vp-1023) {
+    gap: 25px 30px;
+  }
+
+  @media (max-width: $vp-767){
+    grid-template-columns: 1fr;
+    grid-template-rows: 341px 341px 326px 326px;
+    gap: 30px 30px;
+  }
+}
+
+.advantages__container li {
+  position: relative;
+  min-height: 169px;
+  border: 1px solid #ebebeb;
+  border-left: 5px solid $color-light-blue;
+  padding: 35px 41px;
+  padding-top: 95px;
+
+  &:hover {
+    background-color: $color-light-blue
+  }
+
+  @media (max-width: $vp-1023) {
+    min-height: 230px;
+    padding: 90px 41px;
+    padding-bottom: 35px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding: 76px 25px;
+    padding-bottom: 30px;
+    min-height: min-content;
+    overflow-y: scroll;
+  }
+}
+
+.advantages__container h3 {
+  margin: 0;
+  margin-bottom: 13px;
+  font-family: $ff-secondary;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  color: $color-light-blue;
+
+  @media (max-width: $vp-1023) {
+    margin-bottom: 7px;
+  }
+
+  @media (max-width: $vp-767) {
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 9px;
+  }
+}
+
+.advantages__container li:hover h3,
+.advantages__container li:hover p,
+.advantages__container li:hover svg {
+    color: $color-default-grey;
+    fill: $color-default-grey;
+  }
+
+.advantages__container p {
+  margin: 0;
+
+  @media (max-width: $vp-767) {
+    font-size: 14px;
+    line-height: 19px;
+    min-height: 140px;
+  }
+}
+
+.advantages svg {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  fill: $color-light-blue;
+
+  @media (max-width: $vp-767) {
+    top: 25px;
+    left: 25px;
+  }
+}
+
+
+

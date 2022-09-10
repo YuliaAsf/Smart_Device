@@ -1,0 +1,146 @@
+.page-header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 120px;
+
+  @media (max-width: $vp-1023) {
+    position: static;
+  }
+}
+
+.page-footer__container {
+  @include flex;
+}
+
+.header__container {
+  @include flex;
+  padding: 30px 410px 35px 350px;
+  background-image: linear-gradient($color-dark-blue 84.9%, rgba(4, 24, 39, 0));
+  color: $color-default-grey;
+
+  @media (max-width: $vp-1676) {
+    padding: 30px 310px 35px 250px;
+  }
+
+  @media (max-width: $vp-1400) {
+    padding: 30px 170px 40px 110px;
+  }
+
+  @media (max-width: $vp-1023) {
+    min-height: 100px;
+    padding: 20px 70px 25px 50px;
+  }
+
+  @media (max-width: $vp-767) {
+    min-height: 70px;
+    padding: 15px 20px 20px 25px;
+  }
+}
+
+.header__container > a {
+  @include flex;
+  width: 215px;
+}
+
+.header__container img {
+  object-fit: contain;
+
+  @media(max-width: $vp-767) {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.header__container img + img {
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
+.header__contacts {
+  @include flex;
+  width: 40%;
+  padding-right: 10px;
+  padding-bottom: 8px;
+
+  @media (max-width: $vp-1023) {
+    justify-content: flex-end;
+    padding-bottom: 15px;
+  }
+
+  @media (max-width: $vp-767) {
+    justify-content: flex-start;
+    width: 117px;
+    padding-bottom: 5px;
+  }
+}
+
+.header__contacts a{
+  display: block;
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-image:url("../img/svg/email.svg");
+  background-size: 19px 19px;
+  background-position: 6px center;
+
+  @media (max-width: $vp-1676) {
+  font-size: 14px;
+  }
+
+  @media (max-width: $vp-1400) {
+    font-size: 12px;
+  }
+
+  @media (max-width: $vp-1023) {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+.header__link:not(:last-of-type) {
+  margin-right: 15px;
+
+  @media (max-width: $vp-1023) {
+    margin-right: 40px;
+  }
+}
+
+.header__contacts a + a {
+  background-image: url("../img/svg/phone.svg");
+
+  @media (max-width: $vp-1023) {
+    margin-left: 40px;
+  }
+
+};
+
+.page-header button {
+  align-self: flex-start;
+  width: 160px;
+  margin-top: 5px;
+  padding: 11px 15px;
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $ff-secondary;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-1023) {
+    display: none;
+  }
+}
+
+.header__contacts span {
+  @media (max-width: $vp-1023) {
+    display: none;
+  }
+}
+

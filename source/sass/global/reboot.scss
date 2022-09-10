@@ -38,6 +38,7 @@ a {
   color: $color-default-black;
   text-decoration: none;
   user-select: none;
+  color: inherit;
 }
 
 a:hover {
