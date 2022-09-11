@@ -1,16 +1,21 @@
 .advantages__container {
   padding: 120px 350px;
+  padding-bottom: 60px;
+
 
   @media (max-width: $vp-1676) {
-    padding: 100px;
+    padding: 120px 100px;
+    padding-bottom: 60px;
   }
 
   @media (max-width: $vp-1023) {
     padding: 80px 50px;
+    padding-bottom: 30px;
   }
 
   @media (max-width: $vp-767) {
     padding: 50px 25px;
+    padding-bottom: 25px;
   }
 }
 
