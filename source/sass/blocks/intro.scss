@@ -5,6 +5,7 @@
   background-color: $color-default-black;
   color: $color-default-grey;
   border-top: 1px solid $color-default-black;
+  background-color: $color-dark-blue;
   @include background;
   background-image: url("/../img/pictures/background.png");
 
@@ -35,7 +36,7 @@
   }
 
   @media (max-width: $vp-1023) {
-    padding: 60px 50px;
+    padding: 100px 50px;
     }
 
   @media (max-width: $vp-767) {

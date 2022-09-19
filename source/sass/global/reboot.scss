@@ -39,6 +39,7 @@ a {
   text-decoration: none;
   user-select: none;
   color: inherit;
+  cursor: pointer;
 }
 
 a:hover {
@@ -51,4 +52,24 @@ video {
   max-width: 100%;
   min-height: 100%;
   object-fit: cover;
+}
+
+input, textarea {
+  &:hover {
+    outline:1px solid $color-blue-muted;
+  }
+
+  &:focus {
+    border: none;
+    outline: 2px solid orange;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
 }

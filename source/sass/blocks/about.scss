@@ -1,5 +1,6 @@
 .about__container {
   padding: 60px 350px;
+  padding-bottom: 120px;
   padding-left: 600px;
   @include background;
   background-image: url("/../img/svg/year.svg");
@@ -20,11 +21,13 @@
   @media (max-width: $vp-1023) {
     padding: 51px 50px;
     padding-left: 225px;
+    padding-bottom: 80px;
     background-position: top 56px left -200px;
   }
 
   @media (max-width: $vp-767) {
     padding: 16px 25px;
+    padding-bottom: 81px;
     background-image: none;
   }
 }
