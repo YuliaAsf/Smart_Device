@@ -202,7 +202,7 @@ closeButton.addEventListener('click', (evt) => {
 
 
 overlay.addEventListener('click', (evt) => {
-  if (!evt.target.closest('.modal')) { 
+  if (!evt.target.closest('.modal')) {
     closeModal();
   }
 });
