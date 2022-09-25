@@ -2,8 +2,9 @@
   padding: 60px 350px;
   padding-bottom: 120px;
   padding-left: 600px;
+
   @include background;
-  background-image: url("/../img/svg/year.svg");
+  background-image: url("../img/svg/year.svg");
   background-size: 640px 320px;
   background-position: top 60px left 105px;
 
@@ -43,7 +44,6 @@
   @media (max-width: $vp-767) {
     font-size: 28px;
     line-height: 40px;
-
   }
 }
 
@@ -69,6 +69,7 @@
   letter-spacing: 1px;
   color: $color-light-blue;
   text-transform: uppercase;
+
   @include button;
   outline: 1px solid $color-light-blue;
   border-radius: 3px;
@@ -82,5 +83,9 @@
     padding: 8px 10px;
     padding-top: 4px;
     margin-top: -15px;
+  }
+
+  &:focus {
+    outline: 2px solid #ff4500;
   }
 }

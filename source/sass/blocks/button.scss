@@ -1,0 +1,17 @@
+.button {
+  user-select: none;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: 2px solid #ff4500;
+  }
+}

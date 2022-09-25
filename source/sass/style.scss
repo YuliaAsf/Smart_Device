@@ -15,8 +15,6 @@
 @import "global/utils";
 @import "mixins/mixins";
 
-
-
 // Blocks
 // ---------------------------------
 @import "blocks/page-header.scss";
@@ -25,9 +23,11 @@
 @import "blocks/advantages.scss";
 @import "blocks/about.scss";
 @import "blocks/goods.scss";
-@import "blocks/feedback.scss";
 @import "blocks/form.scss";
-
+@import "blocks/feedback.scss";
+@import "blocks/overlay.scss";
+@import "blocks/modal.scss";
+@import "blocks/button.scss";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

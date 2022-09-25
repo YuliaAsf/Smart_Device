@@ -7,15 +7,16 @@
     <meta name = "description" content = "Учебный проект 'Smart Device'">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/ptmono-regular.woff2" type="font/woff2"  as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/robotocondensed-bold.woff2" type="font/woff2"  as="font" crossorigin="anonymous">
   </head>
   <body>
     <header class = "page-header">
-      <div class ="container header__container">
+      <div class ="container page-header__container">
         <a>
           <img src = "img/svg/logo-image.svg" width ="55" height = "55" alt = "Графический логотип">
           <img src = "img/svg/logo-text.svg" width ="145" height = "45" alt = "Текстовый логотип">
         </a>
-        <div class = "header__contacts">
+        <div class = "page-header__contacts">
           <a href = "mailto:info@sd.ru">
             <span>info@sd.ru</span>
           </a>
@@ -23,21 +24,21 @@
             <span>+7 (495) 000 52 52</span>
           </a>
         </div>
-        <button type = "button">Заказать звонок</button>
+        <button type = "button" class = "button">Заказать звонок</button>
       </div>
     </header>
-    <main>
+    <main class = "page-name">
       <section class = "intro">
-        <div class = "intro__container">
+        <div class = "container intro__container">
           <h1 class = "visually-hidden">Поставщик электронных комплектующих "Smart Device"</h1>
           <h2>Печатные платы</h2>
-          <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+          <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
           <a href = "#feedback-form">Получить бесплатную консультацию</a>
           <a href = "#feedback-form">Бесплатная консультация</a>
         </div>
       </section>
       <section class = "advantages">
-        <div class = "advantages__container">
+        <div class = "container advantages__container">
           <h2 class = "visually-hidden">Наши преимущества</h2>
           <ul>
             <li>
@@ -45,46 +46,46 @@
                 <use xlink:href="img/sprite_auto.svg#advantages-watch"></use>
               </svg>
               <h3>Оперативные сроки</h3>
-              <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
+              <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
             </li>
             <li>
               <svg width="35" height="35" viewBox="0 0 35 35" role = "img" aria-hidden = "true" focusable = "false">
                 <use xlink:href="img/sprite_auto.svg#advantages-partners"></use>
               </svg>
               <h3>Крупные поставщики</h3>
-              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.</p>
+              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
             </li>
             <li>
               <svg width="35" height="35" viewBox="0 0 35 35" role = "img" aria-hidden = "true" focusable = "false">
                 <use xlink:href="img/sprite_auto.svg#advantages-confidence"></use>
               </svg>
               <h3>Полная конфиденциальность</h3>
-              <p> По желанию клиента&nbsp;&nbsp;мы обеспечиваем полную конфиденциальность.</p>
+              <p> По&nbsp;желанию клиента&nbsp;&nbsp;мы&nbsp;обеспечиваем полную конфиденциальность.</p>
             </li>
             <li>
               <svg width="35" height="35" viewBox="0 0 35 35" role = "img" aria-hidden = "true" focusable = "false">
                 <use xlink:href="img/sprite_auto.svg#advantages-price"></use>
               </svg>
               <h3>Персонализация стоимости</h3>
-              <p>Мы&nbsp;&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
+              <p>Мы&nbsp;&nbsp;подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту&nbsp;цену, которая Вас устраивает.</p>
             </li>
           </ul>
         </div>
       </section>
       <section class = "about">
-        <div class = "about__container">
-          <h2> О компании</h2>
-            <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-            <p> Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class = "hidden-mobile">Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
-            <p class = "hidden-mobile hidden-tablet">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия.</p>
-            <p class = "hidden-mobile hidden-tablet"> Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов</p>
-          <button type = "button">Подробнее</button>
+        <div class = "container about__container">
+          <h2> О&nbsp;компании</h2>
+            <p>Мы поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997 года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10 дней.</p>
+            <p> Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class = "hidden-mobile">Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+            <p class = "hidden-mobile hidden-tablet">Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14 офисов по&nbsp;всей стране и&nbsp;20 городов присутствия.</p>
+            <p class = "hidden-mobile hidden-tablet"> Мы&nbsp;стремимся к&nbsp;постоянному&nbsp;развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
+          <button type = "button" class ="button">Подробнее</button>
         </div>
       </section>
       <section class = "goods">
-        <div class = "goods__container">
-          <h2> Smart Device предлагает следующие товары и услуги</h2>
-          <h2> Товары и услуги Smart Device</h2>
+        <div class = "container goods__container">
+          <h2> Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+          <h2> Товары и&nbsp;услуги Smart Device</h2>
           <ul>
             <li class = "goods__item goods__item--1">
               <a href = "#" >
@@ -104,31 +105,34 @@
           </ul>
         </div>
       </section>
-      <section class = "feedback">
-        <div class = "feedback__container">
+      <section class = "feedback" id = "feedback-form">
+        <div class = "container feedback__container">
           <h2 class = "visually-hidden"> Форма обратной связи</h2>
-          <div class = "feedback-form__wrapper">
-          <p>Остались вопросы? Задайте их нам!</p>
+          <div class = "feedback__form-wrapper">
+          <p>Остались вопросы? Задайте их&nbsp;нам!</p>
           <span>Мы проконсультируем Вас бесплатно</span>
-          <form class = "feedback-form form" action = "https://echo.htmlacademy.ru/" method = "post" id = "feedback-form">
-            <div class = "feedback-form__block  feedback-form__block--name">
-              <label class = "visually-hidden" for = "name">Имя</label>
-              <input class = "feedback-form__input" type = "text" name = "name" id="name" placeholder = "Имя" pattern ="[A-Za-zА-Яа-яЁё]{1,}" autocomplete = "off" required>
-            </div>
-            <div class = "feedback-form__block  ">
-              <label class = "visually-hidden" for = "phone">Телефон</label>
-              <input class = "feedback-form__input" type = "tel" name = "phone" id="phone" placeholder = "Телефон" autocomplete = "off" minlength = "14" maxlength = "14" required >
-            </div>
-            <div class = "feedback-form__block feedback-form__block--question">
-              <textarea autocomplete = "off" placeholder = "Ваш вопрос"></textarea>
-            </div>
-            <button class = "feedback-form__button" type = "submit"> Задать вопрос</button>
-            <div class  ="feedback-form__block feedback-form__block--agree">
-              <label class = "feedback-form__label">
-                <input class = "visually-hidden" type = "checkbox" name = "isagree" id = "personal" value = "agree" checked required>
-                <span class="feedback-form__mark"></span>
-                <span>Я согласен на&nbsp;обработку  персональных данных</span>
-              </label>
+          <form action = "https://echo.htmlacademy.ru/" method = "post" >
+            <div class = "feedback-form form">
+              <div class = "feedback-form__block  feedback-form__block--name">
+                <label class = "visually-hidden" for = "name">Ваше имя</label>
+                <input class = "feedback-form__input" type = "text" name = "name" id="name" placeholder = "Имя" pattern ="[A-Za-zА-Яа-яЁё]{1,}" autocomplete = "off" required>
+              </div>
+              <div class = "feedback-form__block">
+                <label class = "visually-hidden" for = "phone">Ваш телефон телефон</label>
+                <input class = "feedback-form__input" type = "tel" name = "phone" id="phone" placeholder = "Телефон" autocomplete = "off" minlength = "14" maxlength = "14" required >
+              </div>
+              <div class = "feedback-form__block feedback-form__block--question">
+                <label class = "visually-hidden" for = "question">Ваш вопрос</label>
+                <textarea autocomplete = "off" placeholder = "Ваш вопрос" id = "question"></textarea>
+              </div>
+              <button class = "feedback-form__button button" type = "submit"> Задать вопрос</button>
+              <div class  ="feedback-form__block feedback-form__block--agree">
+                <label class = "feedback-form__label">
+                  <input class = "visually-hidden feedback-form__input-checkbox" type = "checkbox" name = "isagree" id = "isagree" value = "agree" checked required>
+                  <span class="feedback-form__mark"></span>
+                  <span>Я согласен на&nbsp;обработку персональных данных</span>
+                </label>
+              </div>
             </div>
           </form>
         </div>
@@ -144,17 +148,17 @@
           </a>
           <ul>
             <li>
-              <a class = "page-footer__link page-footer__link--pinterest">
+              <a  href = "#" class = "page-footer__link page-footer__link--pinterest">
                 <span>Пинтерест</span>
               </a>
             </li>
             <li>
-              <a class = "page-footer__link page-footer__link--ok">
+              <a href = "#"  class = "page-footer__link page-footer__link--ok">
                 <span>Одноклассники</span>
               </a>
             </li>
             <li>
-              <a class = "page-footer__link page-footer__link--vk">
+              <a href = "#"  class = "page-footer__link page-footer__link--vk">
                 <span>Вконтакте</span>
               </a>
             </li>
@@ -189,7 +193,7 @@
               </li>
             </ul>
           </div>
-          <button class = "page-footer__button page-footer__button--close" type = "button"></button>
+          <button class = "button page-footer__button page-footer__button--close" type = "button"></button>
         </div>
         <div class = "page-footer__block page-footer__contacts">
           <h2>Наш офис</h2>
@@ -201,11 +205,45 @@
             <a href = "tel:79253895829">+7 (925) 389-58-29</a>
             <a href = "tel:79253647813">+7 (925) 364-78-13</a>
           </div>
-          <button class = "page-footer__button page-footer__button--close" type = "button"></button>
+          <button class = "button page-footer__button page-footer__button--close" type = "button"></button>
         </div>
       </div>
     </footer>
+    <div class = "overlay overlay--closed">
+    </div>
+    <section class="modal modal--closed">
+      <div class="modal__container">
+        <h2 class="visually-hidden">Форма заказа обратного звонка</h2>
+        <p>Закажите звонок</p>
+        <span>Оставьте контакты, мы проконсультируем<br>вас бесплатно в&nbsp;удобное время</span>
+        <button class = "button" type="button" ></button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class = "modal-form form">
+            <div class="modal-form__block">
+              <label class="visually-hidden" for="modal-name">Ваше имя</label>
+              <input class = "modal-form__input" type = "text" name = "name" id="modal-name" placeholder = "Имя" pattern ="[A-Za-zА-Яа-яЁё]{1,}" autocomplete = "off" required>
+            </div>
+            <div class="modal-form__block">
+              <label class="visually-hidden" for="modal-phone">Ваш номер телефона</label>
+              <input class = "modal-form__input" type = "tel" name = "phone" id="modal-phone" placeholder = "Телефон" autocomplete = "off" minlength = "14" maxlength = "14" required >
+            </div>
+            <div class="modal-form__block modal-form__block--question">
+            <label class = "visually-hidden" for = "modal-question">Ваш вопрос</label>
+            <textarea class = "modal-form__question" autocomplete = "off" placeholder = "Ваш вопрос" id = "modal-question"></textarea>
+            </div>
+            <button class="button modal__submit-button" type="submit">Отправить</button>
+            <div class  = "modal-form__block modal-form__block--agree">
+              <label class = "modal-form__label" for = "modal-isagree">
+                <input class = "visually-hidden modal-form__input modal-form__input--isagree" type = "checkbox" name = "isagree" id = "modal-isagree" value = "agree" checked required>
+                <span class="modal-form__mark"></span>
+                <span class ="modal-form__agree-confirmation">Я&nbsp;согласен на&nbsp;обработку&nbsp;&nbsp;персональных данных</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
     <script src = "js/vendor.min.js"></script>
-    <script src = "js/main.min.js"></script>>
+    <script src = "js/main.min.js"></script>
   </body>
 </html>

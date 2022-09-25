@@ -1,5 +1,6 @@
-.page-footer  {
+.page-footer {
   min-height: 270px;
+  background-color: $color-dark-blue;
 
   @media (max-width: $vp-1023) {
     min-height: 465px;
@@ -15,13 +16,11 @@
   align-items: flex-start;
   padding: 54px 350px;
   padding-bottom: 44px;
-  background-color: $color-dark-blue;
   color: rgba(255, 255, 255, 0.7);
 
   @media (max-width: $vp-1676) {
     padding: 54px 200px;
     font-size: 14px;
-
   }
 
   @media (max-width: $vp-1400) {
@@ -86,6 +85,7 @@
 .page-footer ul {
   align-self: flex-start;
   max-width: 216px;
+
   @include reset-list;
 }
 
@@ -147,6 +147,7 @@
     width: 100%;
     height: 100%;
     content: "";
+
     @include background;
     background-size: 15px 15px;
     background-position: center center;
@@ -155,18 +156,23 @@
 
   @media (max-width: $vp-767) {
     display: block;
+
+    &:focus {
+      outline: none;
+      opacity: 0.5;
+    }
   }
 }
 
 .page-footer__button--close {
   &::before {
-  background-image: url("/../img/svg/plus.svg");
+    background-image: url("../img/svg/plus.svg");
   }
 }
 
 .page-footer__button--open {
   &::before {
-  background-image: url("/../img/svg/minus.svg");
+    background-image: url("../img/svg/minus.svg");
   }
 }
 
@@ -197,16 +203,16 @@
 }
 
 .page-footer__navigation li {
-
-  @media(max-width: $vp-1023) {
+  @media (max-width: $vp-1023) {
     margin-bottom: 8px;
   }
 }
 
 .page-footer__social-wrapper {
   @media (max-width: $vp-1023) {
-  grid-area: 1 / 1 / 2 / 3;
-  @include flex;
+    grid-area: 1 / 1 / 2 / 3;
+
+    @include flex;
   }
 
   @media (max-width: $vp-767) {
@@ -245,7 +251,11 @@
   border-radius: 50%;
 
   &:hover {
-    outline: 3px solid $color-light-blue;
+    outline: 2px solid $color-light-blue;
+  }
+
+  &:focus {
+    outline: 2px solid #ff4500;
   }
 }
 
@@ -269,26 +279,24 @@
 
 .page-footer__link--pinterest {
   @include background;
-  background-image: url("/../img/svg/pinterest.svg");
+  background-image: url("../img/svg/pinterest.svg");
 }
 
 .page-footer__link--ok {
   @include background;
-  background-image: url("/../img/svg/odnoklassniki.svg");
+  background-image: url("../img/svg/odnoklassniki.svg");
 }
 
-.page-footer__link--vk{
+.page-footer__link--vk {
   @include background;
-  background-image: url("/../img/svg/vkontakte.svg");
+  background-image: url("../img/svg/vkontakte.svg");
 }
-
 
 .page-footer__social-wrapper span {
   font-size: 0;
 }
 
 .page-footer__contacts {
-
   @media (max-width: $vp-1023) {
     padding-left: 15px;
   }
@@ -358,14 +366,14 @@
     display: block;
   }
 }
+
 .nojs {
   @media (max-width: $vp-767) {
-  display: flex;
+    display: flex;
   }
 }
 
 .page-footer__wrapper-block.nojs + button {
-
   @media (max-width: $vp-767) {
     display: none;
   }

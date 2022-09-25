@@ -23,13 +23,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 29px 32px;
+
   @include reset-list;
 
   @media (max-width: $vp-1023) {
     gap: 25px 30px;
   }
 
-  @media (max-width: $vp-767){
+  @media (max-width: $vp-767) {
     grid-template-columns: 1fr;
     grid-template-rows: 341px 341px 326px 326px;
     gap: 30px 30px;
@@ -45,7 +46,7 @@
   padding-top: 95px;
 
   &:hover {
-    background-color: $color-light-blue
+    background-color: $color-light-blue;
   }
 
   @media (max-width: $vp-1023) {
@@ -85,9 +86,9 @@
 .advantages__container li:hover h3,
 .advantages__container li:hover p,
 .advantages__container li:hover svg {
-    color: $color-default-grey;
-    fill: $color-default-grey;
-  }
+  color: $color-default-grey;
+  fill: $color-default-grey;
+}
 
 .advantages__container p {
   margin: 0;
@@ -110,6 +111,3 @@
     left: 25px;
   }
 }
-
-
-

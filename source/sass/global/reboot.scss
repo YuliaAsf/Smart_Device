@@ -38,12 +38,20 @@ a {
   color: $color-default-black;
   text-decoration: none;
   user-select: none;
-  color: inherit;
   cursor: pointer;
-}
 
-a:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:focus {
+    outline: 2px solid #ff4500;
+  }
 }
 
 img,
@@ -52,24 +60,4 @@ video {
   max-width: 100%;
   min-height: 100%;
   object-fit: cover;
-}
-
-input, textarea {
-  &:hover {
-    outline:1px solid $color-blue-muted;
-  }
-
-  &:focus {
-    border: none;
-    outline: 2px solid orange;
-  }
-}
-
-textarea {
-  resize: none;
-}
-
-button {
-  user-select: none;
-  cursor: pointer;
 }
