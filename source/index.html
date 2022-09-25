@@ -7,6 +7,7 @@
     <meta name = "description" content = "Учебный проект 'Smart Device'">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/ptmono-regular.woff2" type="font/woff2"  as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/robotocondensed-bold.woff2"" type="font/woff2"  as="font" crossorigin="anonymous">
   </head>
   <body>
     <header class = "page-header">
@@ -26,7 +27,7 @@
         <button type = "button">Заказать звонок</button>
       </div>
     </header>
-    <main>
+    <main class = "page-name">
       <section class = "intro">
         <div class = "intro__container">
           <h1 class = "visually-hidden">Поставщик электронных комплектующих "Smart Device"</h1>
@@ -87,48 +88,51 @@
           <h2> Товары и услуги Smart Device</h2>
           <ul>
             <li class = "goods__item goods__item--1">
-              <a href = "#" >
+              <a href = "catalog.html" >
                 <h3>Производство печатных плат</h3>
               </a>
             </li>
             <li class ="goods__item goods__item--2">
-              <a  href = "#">
+              <a  href = "catalog.html">
                 <h3>Монтаж печатных плат</h3>
               </a>
             </li>
             <li class = "goods__item goods__item--3">
-              <a href = "#">
+              <a href = "catalog.html">
                 <h3>Комплектующие для светотехники</h3>
               </a>
             </li>
           </ul>
         </div>
       </section>
-      <section class = "feedback">
+      <section class = "feedback" id = "feedback-form">
         <div class = "feedback__container">
           <h2 class = "visually-hidden"> Форма обратной связи</h2>
           <div class = "feedback-form__wrapper">
           <p>Остались вопросы? Задайте их нам!</p>
           <span>Мы проконсультируем Вас бесплатно</span>
-          <form class = "feedback-form form" action = "https://echo.htmlacademy.ru/" method = "post" id = "feedback-form">
-            <div class = "feedback-form__block  feedback-form__block--name">
-              <label class = "visually-hidden" for = "name">Имя</label>
-              <input class = "feedback-form__input" type = "text" name = "name" id="name" placeholder = "Имя" pattern ="[A-Za-zА-Яа-яЁё]{1,}" autocomplete = "off" required>
-            </div>
-            <div class = "feedback-form__block  ">
-              <label class = "visually-hidden" for = "phone">Телефон</label>
-              <input class = "feedback-form__input" type = "tel" name = "phone" id="phone" placeholder = "Телефон" autocomplete = "off" minlength = "14" maxlength = "14" required >
-            </div>
-            <div class = "feedback-form__block feedback-form__block--question">
-              <textarea autocomplete = "off" placeholder = "Ваш вопрос"></textarea>
-            </div>
-            <button class = "feedback-form__button" type = "submit"> Задать вопрос</button>
-            <div class  ="feedback-form__block feedback-form__block--agree">
-              <label class = "feedback-form__label">
-                <input class = "visually-hidden" type = "checkbox" name = "isagree" id = "personal" value = "agree" checked required>
-                <span class="feedback-form__mark"></span>
-                <span>Я согласен на&nbsp;обработку  персональных данных</span>
-              </label>
+          <form action = "https://echo.htmlacademy.ru/" method = "post" >
+            <div class = "feedback-form form">
+              <div class = "feedback-form__block  feedback-form__block--name">
+                <label class = "visually-hidden" for = "name">Ваше имя</label>
+                <input class = "feedback-form__input" type = "text" name = "name" id="name" placeholder = "Имя" pattern ="[A-Za-zА-Яа-яЁё]{1,}" autocomplete = "off" required>
+              </div>
+              <div class = "feedback-form__block">
+                <label class = "visually-hidden" for = "phone">Ваш телефон телефон</label>
+                <input class = "feedback-form__input" type = "tel" name = "phone" id="phone" placeholder = "Телефон" autocomplete = "off" minlength = "14" maxlength = "14" required >
+              </div>
+              <div class = "feedback-form__block feedback-form__block--question">
+                <label class = "visually-hidden" for = "question">Ваш вопрос</label>
+                <textarea autocomplete = "off" placeholder = "Ваш вопрос" id = "question"></textarea>
+              </div>
+              <button class = "feedback-form__button" type = "submit"> Задать вопрос</button>
+              <div class  ="feedback-form__block feedback-form__block--agree form__block--agree">
+                <label class = "feedback-form__label">
+                  <input class = "visually-hidden" type = "checkbox" name = "isagree" id = "isagree" value = "agree" checked required>
+                  <span class="feedback-form__mark"></span>
+                  <span>Я согласен на&nbsp;обработку  персональных данных</span>
+                </label>
+              </div>
             </div>
           </form>
         </div>
@@ -144,17 +148,17 @@
           </a>
           <ul>
             <li>
-              <a class = "page-footer__link page-footer__link--pinterest">
+              <a  href = "#" class = "page-footer__link page-footer__link--pinterest">
                 <span>Пинтерест</span>
               </a>
             </li>
             <li>
-              <a class = "page-footer__link page-footer__link--ok">
+              <a href = "#"  class = "page-footer__link page-footer__link--ok">
                 <span>Одноклассники</span>
               </a>
             </li>
             <li>
-              <a class = "page-footer__link page-footer__link--vk">
+              <a href = "#"  class = "page-footer__link page-footer__link--vk">
                 <span>Вконтакте</span>
               </a>
             </li>
@@ -205,7 +209,41 @@
         </div>
       </div>
     </footer>
+    <div class = "overlay overlay--closed">
+    </div>
+    <section class="modal modal--closed">
+      <div class="modal__container">
+        <h2 class="visually-hidden">Форма заказа обратного звонка</h2>
+        <p>Закажите звонок</p>
+        <span>Оставьте контакты, мы проконсультируем<br>вас бесплатно в удобное время</span>
+        <button type="button" ></button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div class = "modal__form form">
+            <div class="modal__form-block">
+              <label class="visually-hidden" for="modal-name">Ваше имя</label>
+              <input class = "modal-form__input" type = "text" name = "name" id="modal-name" placeholder = "Имя" pattern ="[A-Za-zА-Яа-яЁё]{1,}" autocomplete = "off" required>
+            </div>
+            <div class="modal__form-block">
+              <label class="visually-hidden" for="modal-phone">Ваш номер телефона</label>
+              <input class = "modal-form__input" type = "tel" name = "phone" id="modal-phone" placeholder = "Телефон" autocomplete = "off" minlength = "14" maxlength = "14" required >
+            </div>
+            <div class="modal__form-block modal__form-block--question">
+            <label class = "visually-hidden" for = "modal-question">Ваш вопрос</label>
+            <textarea class = "modal__question" autocomplete = "off" placeholder = "Ваш вопрос" id = "modal-question"></textarea>
+            </div>
+            <button class="modal__submit-button" type="submit">Отправить</button>
+            <div class  = "modal-form__block modal-form__block--agree">
+              <label class = "modal-form__label" for = "modal-isagree">
+                <input class = "visually-hidden modal-form__input-isagree" type = "checkbox" name = "isagree" id = "modal-isagree" value = "agree" checked required>
+                <span class="modal-form__mark"></span>
+                <span class ="modal-form__agree-confirmation">Я согласен на&nbsp;обработку&nbsp;&nbsp;персональных данных</span>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
     <script src = "js/vendor.min.js"></script>
-    <script src = "js/main.min.js"></script>>
+    <script src = "js/main.min.js"></script>
   </body>
 </html>

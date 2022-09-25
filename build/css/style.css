@@ -444,6 +444,15 @@ a {
 
 a:hover {
   text-decoration: underline;
+  opacity: 0.8;
+}
+
+a:active {
+  opacity: 0.2;
+}
+
+a:focus {
+  outline: 2px solid orange;
 }
 
 img,
@@ -453,6 +462,10 @@ video {
   min-height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+textarea {
+  resize: none;
 }
 
 input:hover,
@@ -466,16 +479,25 @@ textarea:focus {
   outline: 2px solid orange;
 }
 
-textarea {
-  resize: none;
-}
-
 button {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+button:active {
+  opacity: 0.3;
+}
+
+button:focus {
+  outline: 2px solid orange;
 }
 
 @font-face {
@@ -502,13 +524,13 @@ button {
   font-display: swap;
 }
 
-.header,
-.footer {
+.page-header,
+.page-footer {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
 
-main {
+.page-main {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -528,27 +550,8 @@ main {
   clip-path: inset(100%);
 }
 
-.scroll-lock-ios {
-  position: fixed;
-  overflow: hidden;
-}
-
-.scroll-lock {
-  overflow: hidden;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrolling {
-  height: 100vh;
-  overflow: hidden;
+:disabled {
+  opacity: 0.2;
 }
 
 .page-header {
@@ -644,14 +647,23 @@ main {
   align-self: flex-start;
   width: 160px;
   margin-top: 5px;
-  padding: 11px 15px;
+  padding: 11px 17px;
+  padding-bottom: 14px;
   padding-top: 8px;
   font-size: 14px;
   line-height: 16px;
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 700;
   letter-spacing: 0.6px;
+  color: #ffffff;
+  outline: 1px solid #f2f5f6;
+  border-radius: 3px;
+  background-color: transparent;
   text-transform: uppercase;
+}
+
+.page-header button:focus {
+  outline: 2px solid orange;
 }
 
 .intro {
@@ -727,6 +739,7 @@ main {
 
 .page-footer {
   min-height: 270px;
+  background-color: #041827;
 }
 
 .page-footer__container {
@@ -744,7 +757,6 @@ main {
   align-items: flex-start;
   padding: 54px 350px;
   padding-bottom: 44px;
-  background-color: #041827;
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -860,7 +872,11 @@ main {
 }
 
 .page-footer__link:hover {
-  outline: 3px solid #00b2ff;
+  outline: 2px solid #00b2ff;
+}
+
+.page-footer__link:focus {
+  outline: 2px solid orange;
 }
 
 .page-footer__social-wrapper > a {
@@ -1040,6 +1056,10 @@ main {
   border-radius: 3px;
 }
 
+.about button:focus {
+  outline: 2px solid orange;
+}
+
 .goods {
   font-family: "Roboto Condensed", "Tahoma", sans-serif;
   font-weight: 400;
@@ -1050,7 +1070,7 @@ main {
 .goods__container {
   min-height: 740px;
   padding: 65px 350px;
-  padding-bottom: 140px;
+  padding-bottom: 139px;
 }
 
 .goods h2 {
@@ -1138,6 +1158,93 @@ main {
   background-image: url("/../img/pictures/goods-card-3.png");
 }
 
+.form {
+  background-color: #00b2ff;
+  color: #ffffff;
+}
+
+.form input,
+.form textarea {
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-width: 100%;
+  padding: 15px;
+  background-color: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  border: 1px solid #00b2ff;
+}
+
+.form input {
+  min-height: 21px;
+}
+
+.form textarea {
+  padding: 25px 15px;
+  padding-top: 26px;
+}
+
+.form button {
+  min-height: 45px;
+  background-color: #041827;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 3px;
+}
+
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.form input::-ms-input-placeholder,
+.form textarea::-ms-input-placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+.form label {
+  font-size: 14px;
+  line-height: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.form label:hover {
+  text-decoration: underline;
+}
+
+.form label:active {
+  opacity: 0.5;
+}
+
 .feedback {
   background-image: -o-linear-gradient(310.9deg, #026593 33.6%, #00b2ff 33.6%);
   background-image: linear-gradient(139.1deg, #026593 33.6%, #00b2ff 33.6%);
@@ -1188,16 +1295,17 @@ main {
   line-height: 21px;
   margin: 0;
   margin-left: 4px;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 }
 
-.feedback form {
+form .feedback-form {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  width: 585px;
-  gap: 20px 30px;
+  justify-items: stretch;
+  width: 580px;
+  gap: 21px 30px;
   margin-left: 5px;
 }
 
@@ -1217,13 +1325,8 @@ form .feedback-form__block--question {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: 2 / 1 / 3 / 3;
-  width: 580px;
   min-height: 155px;
-  margin-bottom: 16px;
-}
-
-form .feedback-form__input {
-  width: 245px;
+  margin-bottom: 14px;
 }
 
 form .feedback-form__button {
@@ -1236,6 +1339,10 @@ form .feedback-form__button {
   line-height: 19px;
 }
 
+form .feedback-form__button:focus {
+  outline: 2px solid orange;
+}
+
 form .feedback-form__label {
   position: relative;
   display: -webkit-box;
@@ -1245,31 +1352,16 @@ form .feedback-form__label {
   align-self: flex-end;
   max-width: 250px;
   padding-left: 37px;
-  font-size: 14px;
-  line-height: 15px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  cursor: pointer;
-}
-
-form .feedback-form__label:hover {
-  text-decoration: underline;
-}
-
-form .feedback-form__label:active {
-  opacity: 0.5;
 }
 
 form .feedback-form__mark {
   position: absolute;
+  left: 10px;
+  top: 7px;
   width: 15px;
   height: 15px;
   outline: 1px solid #ffffff;
   border-radius: 2px;
-  left: 10px;
-  top: 7px;
 }
 
 form .feedback-form__label input:checked + span::after {
@@ -1284,62 +1376,165 @@ form .feedback-form__label input:checked + span::after {
   content: '';
 }
 
-.form {
+form .feedback-form__label input:focus + span::after {
+  outline: 2px solid orange;
+}
+
+.overlay {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(3, 16, 27, 0.7);
+}
+
+.modal {
+  position: absolute;
+  display: none;
+  top: 146px;
+  left: 36.6%;
+  z-index: 2;
+  color: #ffffff;
   background-color: #00b2ff;
-  color: #ffffff;
 }
 
-.form input,
-.form textarea {
-  background-color: rgba(4, 20, 39, 0.15);
-  border: none;
+.modal--closed,
+.overlay--closed {
+  display: none;
 }
 
-.form input {
-  min-height: 20px;
-  padding: 15px;
+.modal--opened,
+.overlay--opened {
+  display: block;
 }
 
-.form textarea {
-  padding: 25px 15px;
-  width: 100%;
-}
-
-.form button {
-  min-height: 45px;
-  background-color: #041827;
-  font-family: "Roboto Condensed", "Tahoma", sans-serif;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 0.7px;
-  text-transform: uppercase;
-  border: none;
+.modal__container {
+  position: relative;
+  width: 420px;
+  min-height: 535px;
+  padding: 36px 40px 38px;
   border-radius: 3px;
 }
 
-.form input::-webkit-input-placeholder,
-.form textarea::-webkit-input-placeholder {
+.modal__container > button {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+}
+
+.modal__container > button:hover {
+  opacity: 0.7;
+}
+
+.modal__container > button:active {
+  opacity: 0.3;
+}
+
+.modal__container > button::before {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  background-image: url("/../img/svg/close-icon.svg");
+  content: "";
+}
+
+.modal p {
+  margin: 0;
+  margin-bottom: 4px;
+  font-size: 30px;
+  line-height: 42px;
+  font-family: "Roboto Condensed", "Tahoma", sans-serif;
+  font-weight: 400;
+}
+
+.modal__container > span {
+  display: block;
+  margin: 0;
+  margin-bottom: 38px;
+  font-size: 16px;
+  line-height: 22px;
   color: #ffffff;
 }
 
-.form input::-moz-placeholder,
-.form textarea::-moz-placeholder {
-  color: #ffffff;
+form .modal-form__input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  padding-top: 13px;
+  font-size: 16px;
+  line-height: 21px;
 }
 
-.form input:-ms-input-placeholder,
-.form textarea:-ms-input-placeholder {
-  color: #ffffff;
+form .modal__question {
+  min-height: 155px;
+  margin-bottom: 25px;
+  padding: 25px 15px;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 3px;
 }
 
-.form input::-ms-input-placeholder,
-.form textarea::-ms-input-placeholder {
-  color: #ffffff;
+form .modal__submit-button {
+  width: 100%;
+  min-height: 45px;
+  margin-bottom: 16px;
+  padding-top: 6px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.5px;
 }
 
-.form input::placeholder,
-.form textarea::placeholder {
-  color: #ffffff;
+form .modal__submit-button:focus {
+  outline: 2px solid orange;
+}
+
+form .modal-form__agree-confirmation,
+form .modal-form__mark {
+  margin: 0;
+}
+
+form .modal-form__label {
+  position: relative;
+  padding-left: 33px;
+}
+
+form .modal-form__mark {
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  outline: 1px solid #ffffff;
+  border-radius: 2px;
+}
+
+form .modal-form__input-isagree:checked + span::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("/../img/svg/tick.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  content: '';
+}
+
+form .modal-form__input-isagree:focus + span::after {
+  outline: 2px solid orange;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -1427,17 +1622,13 @@ form .feedback-form__label input:checked + span::after {
     width: 390px;
   }
 
-  .feedback form {
+  form .feedback-form {
     width: 390px;
     gap: 20px 15px;
   }
 
   form .feedback-form__block--question {
     width: 460px;
-  }
-
-  form .feedback-form__input {
-    width: 190px;
   }
 
   form .feedback-form__button {
@@ -1644,7 +1835,7 @@ form .feedback-form__label input:checked + span::after {
 
   .goods__container {
     padding: 55px 50px;
-    padding-bottom: 75px;
+    padding-bottom: 75.5px;
   }
 
   .goods h2 {
@@ -1673,6 +1864,15 @@ form .feedback-form__label input:checked + span::after {
     background-image: url("/../img/pictures/goods-card-3-tablet.png");
   }
 
+  .form textarea {
+    padding-top: 32px;
+  }
+
+  .form label {
+    padding-left: 25px;
+    padding-bottom: 5px;
+  }
+
   .feedback {
     background-color: #00b2ff;
     background-image: none;
@@ -1684,7 +1884,7 @@ form .feedback-form__label input:checked + span::after {
 
   .feedback__container {
     padding: 45px 50px;
-    padding-bottom: 125px;
+    padding-bottom: 124px;
   }
 
   .feedback-form__wrapper {
@@ -1693,7 +1893,7 @@ form .feedback-form__label input:checked + span::after {
   }
 
   .feedback-form__wrapper p {
-    margin-bottom: 7px;
+    margin-bottom: 8px;
   }
 
   .feedback-form__wrapper > span {
@@ -1704,7 +1904,7 @@ form .feedback-form__label input:checked + span::after {
     margin-bottom: 27px;
   }
 
-  .feedback form {
+  form .feedback-form {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -1713,27 +1913,15 @@ form .feedback-form__label input:checked + span::after {
 
   form .feedback-form__block--question {
     width: 100%;
-  }
-
-  form .feedback-form__input {
-    width: 100%;
+    margin-bottom: 15px;
   }
 
   form .feedback-form__button {
     width: 265px;
   }
 
-  form .feedback-form__label {
-    padding-left: 25px;
-    padding-bottom: 5px;
-  }
-
   form .feedback-form__mark {
     left: 0;
-  }
-
-  .form textarea {
-    padding-top: 32px;
   }
 }
 
@@ -1885,6 +2073,11 @@ form .feedback-form__label input:checked + span::after {
 
   .page-footer__block button {
     display: block;
+  }
+
+  .page-footer__block button:focus {
+    outline: none;
+    opacity: 0.5;
   }
 
   .page-footer__social-wrapper {
@@ -2078,6 +2271,14 @@ form .feedback-form__label input:checked + span::after {
     background-image: url("/../img/pictures/goods-card-3-mobile.png");
   }
 
+  .form textarea {
+    padding-top: 25px;
+  }
+
+  .form label {
+    padding-left: 30px;
+  }
+
   .feedback__container {
     padding: 45px 25px;
     padding-bottom: 85px;
@@ -2094,7 +2295,7 @@ form .feedback-form__label input:checked + span::after {
     margin-bottom: 34px;
   }
 
-  .feedback form {
+  form .feedback-form {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
@@ -2114,19 +2315,11 @@ form .feedback-form__label input:checked + span::after {
     margin-bottom: 5px;
   }
 
-  form .feedback-form__label {
-    padding-left: 30px;
-  }
-
   form .feedback-form__mark {
     width: 12px;
     height: 12px;
     left: 6px;
     top: 8px;
-  }
-
-  .form textarea {
-    padding-top: 25px;
   }
 }
 

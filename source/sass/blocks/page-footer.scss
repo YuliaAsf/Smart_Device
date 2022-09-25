@@ -1,5 +1,6 @@
 .page-footer  {
   min-height: 270px;
+  background-color: $color-dark-blue;
 
   @media (max-width: $vp-1023) {
     min-height: 465px;
@@ -15,7 +16,6 @@
   align-items: flex-start;
   padding: 54px 350px;
   padding-bottom: 44px;
-  background-color: $color-dark-blue;
   color: rgba(255, 255, 255, 0.7);
 
   @media (max-width: $vp-1676) {
@@ -155,6 +155,11 @@
 
   @media (max-width: $vp-767) {
     display: block;
+
+    &:focus {
+      outline: none;
+      opacity: 0.5;
+    }
   }
 }
 
@@ -245,7 +250,11 @@
   border-radius: 50%;
 
   &:hover {
-    outline: 3px solid $color-light-blue;
+    outline: 2px solid $color-light-blue;
+  }
+
+  &:focus {
+    outline: 2px solid orange;
   }
 }
 

@@ -124,17 +124,26 @@
   align-self: flex-start;
   width: 160px;
   margin-top: 5px;
-  padding: 11px 15px;
+  padding: 11px 17px;
+  padding-bottom: 14px;
   padding-top: 8px;
   font-size: 14px;
   line-height: 16px;
   font-family: $ff-secondary;
   font-weight: 700;
   letter-spacing: 0.6px;
+  color: $color-default-white;
+  outline: 1px solid $color-default-grey;
+  border-radius: 3px;
+  background-color: transparent;
   text-transform: uppercase;
 
   @media (max-width: $vp-1023) {
     display: none;
+  }
+
+  &:focus {
+    outline: 2px solid orange;
   }
 }
 

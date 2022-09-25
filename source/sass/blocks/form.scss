@@ -5,18 +5,23 @@
 
 .form input,
 .form textarea {
+  display: block;
+  box-sizing: border-box;
+  min-width: 100%;
+  padding: 15px;
   background-color: rgba(4, 20, 39, 0.15);
   border: none;
+  border-radius: 3px;
+  border: 1px solid $color-light-blue;
 }
 
 .form input {
-  min-height: 20px;
-  padding: 15px;
+  min-height: 21px;
 }
 
 .form textarea {
   padding: 25px 15px;
-  width: 100%;
+  padding-top: 26px;
 
   @media (max-width: $vp-1023) {
     padding-top: 32px;
@@ -43,5 +48,31 @@
 .form input::placeholder,
 .form textarea::placeholder {
   color: $color-default-white;
+  opacity: 0.7;
 }
+
+.form label {
+  font-size: 14px;
+  line-height: 15px;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $vp-1023) {
+    padding-left: 25px;
+    padding-bottom: 5px;
+  }
+
+  @media (max-width: $vp-767) {
+    padding-left: 30px;
+  }
+}
+
 

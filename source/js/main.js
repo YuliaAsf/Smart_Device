@@ -145,23 +145,67 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-const submitButton = document.querySelector('.feedback-form button');
-const inputs = document.querySelectorAll('.feedback-form input');
-const form = document.querySelector('.feedback-form');
-
-  form.addEventListener('submit', (evt)=> {
-
-    })
-
-
-
-
-
-
-
 // Local Storage
 const formData = document.querySelectorAll('input');
 for (let i = 0; i <= formData.length - 1; i++) {
   localStorage.setItem('formData', formData.value);
 }
+
+// Модальное окно
+const orderButton = document.querySelector('.page-header button');
+const modal = document.querySelector('.modal');
+const closeButton = document.querySelector('.modal__container > button');
+const overlay = document.querySelector('.overlay');
+const form = document.querySelector('.modal form');
+const modalName = document.querySelector('#modal-name');
+
+const openModal = () => {
+  modal.classList.remove('modal--closed');
+  modal.classList.add('modal--opened');
+  orderButton.disabled = true;
+  overlay.classList.remove('overlay--closed');
+  overlay.classList.add('overlay--opened');
+  modalName.focus();
+};
+
+const closeModal = ()=> {
+  modal.classList.remove('modal--opened');
+  modal.classList.add('modal--closed');
+  overlay.classList.remove('overlay--opened');
+  overlay.classList.add('overlay--closed');
+  orderButton.disabled = false;
+  form.reset();
+};
+
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
+const onCloseModal = (evt) => {
+  if (isEscapeKey(evt)) {
+    closeModal();
+  }
+};
+
+if (modal) {
+  orderButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
+    if (modal.classList.contains('modal--closed')) {
+      openModal();
+      document.addEventListener('keydown', onCloseModal);
+    }
+  });
+}
+
+closeButton.addEventListener('click', (evt) => {
+  evt.preventDefault();
+  closeModal();
+  document.removeEventListener('keydown', onCloseModal);
+});
+
+
+overlay.addEventListener('click', (evt) => {
+  if (!evt.target.closest('.modal')) { // если этот элемент или его родительские элементы не модальное окно
+    closeModal();
+  }
+});
 

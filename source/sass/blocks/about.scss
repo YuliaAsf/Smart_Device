@@ -83,4 +83,8 @@
     padding-top: 4px;
     margin-top: -15px;
   }
+
+  &:focus {
+    outline: 2px solid orange;
+  }
 }
